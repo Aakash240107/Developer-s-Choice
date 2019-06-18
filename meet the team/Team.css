@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "montserrat";
+}
+h1{
+  color: whitesmoke;
+  align-content: center;
+  text-align: center;
+margin-top: 3cm;
+}
+body{
+background-image: linear-gradient(rgba(0, 0, 0, 0.63),rgba(0, 0, 0, 0.404)),url(bg.jpg);
+background-size: contain;
+padding: 60px;  }
+.middle{
+  position: absolute;
+  top: 50%;
+  left:55%;
+  transform: translate(-50%,-50%);
+}
+.card{
+  cursor: pointer;
+  width: 350px;
+  height: 500px;
+}
+.front,.back{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+.front img{
+  height: 95%;
+  
+}
+.front{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back{
+  background: silver;
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content{
+  color:blue;
+  text-align: center;
+  width: 100%;
+}
+.sm{
+  margin: 20px 0;
+}
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+.card:hover > .front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.middle2{
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%,-50%);
+}
+.back-content2{
+  color: #2486e7;
+  text-align: center;
+  width: 100%;
